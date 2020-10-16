@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<title>In Class - Week 8</title>
+		<link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+		<style>
+			/*
+			.square {
+				height: 200px;
+				width: 200px;
+				background-color: goldenrod;
+			}
+			*/
+		</style>
+	</head>
+	<body>
+	
+		<i class="nes-icon is-large heart"></i>
+		
+		<section class="nes-container">
+		  <section class="message-list">
+			<section class="message -left">
+			  <i class="nes-bcrikko"></i>
+			  <!-- Balloon -->
+			  <div class="nes-balloon from-left">
+				<p>Hello NES.css</p>
+			  </div>
+			</section>
+
+			<section class="message -right">
+			  <!-- Balloon -->
+			  <div class="nes-balloon from-right">
+				<p>Good morning. Thou hast had a good night's sleep, I hope.</p>
+			  </div>
+			  <i class="nes-bcrikko"></i>
+			</section>
+		  </section>
+		</section>
+		
+		<!-- Replaced by the heart -->
+		<!-- <div class="square"></div> -->
+		
+		<script src="TinyAnimate-0.3.0/src/TinyAnimate.js"></script>
+		<script>
+			
+			var heart = document.querySelector('.heart');
+			heart.addEventListener('mouseover', animateElement);
+			
+			function animateElement() {
+				var randomPercent = Math.floor(Math.random() * 100);
+			
+				TinyAnimate.animateCSS(heart, 'marginLeft', '%', 0, randomPercent, 2500, 'easeInOutBounce', function() {
+					console.log('done!!!111oneone');
+				});
+			}
+			
+			
+			
+		</script>
+	
+	</body>
+</html>
